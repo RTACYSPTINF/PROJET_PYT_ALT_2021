@@ -1,0 +1,2066 @@
+<!DOCTYPE html>
+<!-- saved from url=(0085)https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/ -->
+<html class="enable-mobile-menu js" lang="fr" antidoteapi_jsconnect="true"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+    
+
+    <title>
+        Tracer et dessiner - À la découverte de turtle • Tutoriels • Zeste de Savoir
+    </title>
+
+    <meta name="language" content="fr">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0">
+
+    
+    <meta name="theme-color" content="#084561">
+    <meta name="msapplication-navbutton-color" content="#084561">
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    
+    
+    <meta name="description" content="Un module Python qui en a sous la caparace">
+
+
+    
+
+
+    
+    <meta property="og:site_name" content="Zeste de Savoir">
+    <meta property="og:title" content="Tracer et dessiner - À la découverte de turtle • Tutoriels • Zeste de Savoir">
+    <meta property="og:url" content="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/">
+    <meta property="og:language" content="fr_FR">
+    <meta property="og:image:url" content="http://zestedesavoir.com/media/galleries/2660/cf17d2ff-de25-4428-be67-532fe041fd06.png.144x144_q95_crop.jpg">
+    <meta property="og:image:secure_url" content="https://zestedesavoir.com/media/galleries/2660/cf17d2ff-de25-4428-be67-532fe041fd06.png.144x144_q95_crop.jpg">
+    
+    <meta property="og:type" content="article">
+
+
+
+
+<meta property="og:article:section" content="Tutoriels">
+
+    <meta property="og:article:tag" content="Programmation et algorithmique">
+
+
+
+
+    
+    <meta property="twitter:domain" content="https://zestedesavoir.com/">
+    
+        <meta property="twitter:card" content="summary">
+    
+    <meta property="twitter:url" content="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/">
+    <meta property="twitter:title" content="Tracer et dessiner - À la découverte de turtle • Tutoriels • Zeste de Savoir">
+    <meta property="twitter:description" content="Un module Python qui en a sous la caparace">
+    <meta property="twitter:site" content="@ZesteDeSavoir">
+    <meta property="twitter:creator" content="@ZesteDeSavoir">
+    <meta property="twitter:image" content="http://zestedesavoir.com/media/galleries/2660/cf17d2ff-de25-4428-be67-532fe041fd06.png.144x144_q95_crop.jpg">
+
+
+    
+    
+
+
+    
+    <link rel="stylesheet" href="./Tracer et dessiner - À la découverte de turtle • Tutoriels • Zeste de Savoir_files/all.min.css" integrity="sha384-v8BU367qNbs/aIZIxuivaU55N5GPF89WBerHoGA4QTcbUjYiLQtKdrfXnqAcXyTv" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Tracer et dessiner - À la découverte de turtle • Tutoriels • Zeste de Savoir_files/easymde.min.988f62e1a8b3.css">
+    <link rel="stylesheet" href="./Tracer et dessiner - À la découverte de turtle • Tutoriels • Zeste de Savoir_files/idea.ff87f4fad8fa.css">
+    <link rel="stylesheet" href="./Tracer et dessiner - À la découverte de turtle • Tutoriels • Zeste de Savoir_files/katex.min.50a5301fd703.css">
+    <link rel="stylesheet" href="./Tracer et dessiner - À la découverte de turtle • Tutoriels • Zeste de Savoir_files/main.55bdd4d53633.css">
+
+    
+    
+
+
+    
+    <link href="./Tracer et dessiner - À la découverte de turtle • Tutoriels • Zeste de Savoir_files/css" rel="stylesheet" type="text/css">
+
+
+    
+    
+
+    
+    
+        
+    
+
+    
+        
+            <link rel="icon" sizes="16x16" type="image/png" href="https://zestedesavoir.com/static/images/favicons/16.3cb06f49a319.png">
+        
+            <link rel="icon" sizes="32x32" type="image/png" href="https://zestedesavoir.com/static/images/favicons/32.8864f5e754ff.png">
+        
+            <link rel="icon" sizes="64x64" type="image/png" href="https://zestedesavoir.com/static/images/favicons/64.b399daf7e2f5.png">
+        
+            <link rel="icon" sizes="96x96" type="image/png" href="https://zestedesavoir.com/static/images/favicons/96.9ed1415603d4.png">
+        
+            <link rel="icon" sizes="128x128" type="image/png" href="https://zestedesavoir.com/static/images/favicons/128.07157f777049.png">
+        
+            <link rel="icon" sizes="256x256" type="image/png" href="https://zestedesavoir.com/static/images/favicons/256.b4304d164aa4.png">
+        
+    
+
+    
+    
+        
+            <link rel="apple-touch-icon" type="image/png" href="https://zestedesavoir.com/static/images/favicons/114.772f39c33b1a.png">
+        
+            <link rel="apple-touch-icon" type="image/png" href="https://zestedesavoir.com/static/images/favicons/120.8cf680a96e7d.png">
+        
+            <link rel="apple-touch-icon" type="image/png" href="https://zestedesavoir.com/static/images/favicons/144.a9e39f886050.png">
+        
+            <link rel="apple-touch-icon" type="image/png" href="https://zestedesavoir.com/static/images/favicons/152.a2003b17a9b2.png">
+        
+            <link rel="apple-touch-icon" type="image/png" href="https://zestedesavoir.com/static/images/favicons/167.540217e160af.png">
+        
+            <link rel="apple-touch-icon" type="image/png" href="https://zestedesavoir.com/static/images/favicons/180.e167ecab6abe.png">
+        
+    
+
+    
+    <link rel="alternate" type="application/rss+xml" title="Forum" href="https://zestedesavoir.com/forums/flux/messages/rss/">
+    <link rel="alternate" type="application/rss+xml" title="Nouveaux tutoriels (RSS)" href="https://zestedesavoir.com/tutoriels/flux/rss/">
+    <link rel="alternate" type="application/atom+xml" title="Nouveaux tutoriels (ATOM)" href="https://zestedesavoir.com/tutoriels/flux/atom/">
+    <link rel="alternate" type="application/rss+xml" title="Nouveaux articles (RSS)" href="https://zestedesavoir.com/articles/flux/rss/">
+    <link rel="alternate" type="application/atom+xml" title="Nouveaux articles (ATOM)" href="https://zestedesavoir.com/articles/flux/atom/">
+    <link rel="alternate" type="application/rss+xml" title="Nouveaux billets (RSS)" href="https://zestedesavoir.com/billets/flux/rss/">
+    <link rel="alternate" type="application/atom+xml" title="Nouveaux billets (ATOM)" href="https://zestedesavoir.com/billets/flux/atom/">
+    
+    <link rel="search" type="application/opensearchdescription+xml" title="Zeste de Savoir" href="https://zestedesavoir.com/rechercher/opensearch.xml">
+
+    
+    
+    <script type="text/javascript" src="./Tracer et dessiner - À la découverte de turtle • Tutoriels • Zeste de Savoir_files/MathJax.js.téléchargement" integrity="sha384-Ra6zh6uYMmH5ydwCqqMoykyf1T/+ZcnOQfFPhDrp2kI4OIxadnhsvvA2vv9A7xYv" crossorigin="anonymous" async="">
+</script>
+
+
+</head>
+
+
+    
+
+
+<body class="" itemscope="" itemtype="http://schema.org/WebPage" data-show-markdown-help="true">
+
+    
+<div id="old-browser-warning-container"></div>
+
+
+
+
+<script>
+
+(function () {
+    var container = document.getElementById("old-browser-warning-container");
+
+    if (window.ActiveXObject || 'ActiveXObject' in window) {
+        var more = document.createElement('A');
+        more.innerText = 'En savoir plus';
+        more.setAttribute('href', 'https://browsehappy.com/?locale=fr');
+
+        var div = document.createElement('DIV');
+        div.className = 'old-browser-warning';
+        div.innerText = 'Le bon fonctionnement du site avec Internet Explorer n’est pas garanti  •  ';
+        div.appendChild(more);
+        container.appendChild(div);
+
+        document.body.classList.add('old-browser-warning-shown');
+    }
+})();
+
+</script>
+
+
+    <div class="mobile-menu initialized initialized-events" id="mobile-menu"><div class="search header-right mobile-menu-imported">
+                    <form action="https://zestedesavoir.com/rechercher/">
+                        <input type="text" name="q" placeholder="Rechercher" title="Contenu de la recherche">
+                        <button type="submit" class="ico-after search-submit" title="Lancer la recherche">OK</button>
+                    </form>
+                    <a href="https://zestedesavoir.com/rechercher/" title="Recherche avancée" class="search-more"></a>
+                </div><div class="mobile-menu-bloc" data-title="Menu"><a href="https://zestedesavoir.com/bibliotheque/" class="mobile-menu-link has-dropdown light">
+                    Bibliothèque
+                    <span class="arrow"></span>
+                </a><a href="https://zestedesavoir.com/billets/" class="mobile-menu-link has-dropdown light">
+                    Tribune
+                    <span class="arrow"></span>
+                </a><a href="https://zestedesavoir.com/forums/" class="mobile-menu-link has-dropdown light">
+                    Forum
+                    <span class="arrow"></span>
+                </a></div><div class="mobile-menu-bloc" data-title="Sommaire du contenu"><a class="mobile-menu-link light" href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/configurer-la-fenetre/">
+                    Configurer la fenêtre
+                </a><a class="mobile-menu-link light" href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/">
+                    Tracer et dessiner
+                </a><a class="mobile-menu-link light" href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/colorier/">
+                    Colorier
+                </a><a class="mobile-menu-link light" href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/interagir-avec-lutilisateur/">
+                    Interagir avec l'utilisateur
+                </a><a class="mobile-menu-link light" href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/aller-plus-loin-dans-les-configurations/">
+                    Aller plus loin dans les configurations
+                </a><a class="mobile-menu-link light" href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/samuser-avec-plusieurs-tortues/">
+                    S'amuser avec plusieurs tortues
+                </a></div><div class="mobile-menu-bloc mobile-show-ico" data-title="Partager"><a href="https://twitter.com/share?url=https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/&amp;text=Tracer%20et%20dessiner" class="ico-after twitter blue light mobile-menu-link" rel="nofollow">
+                Twitter
+            </a><a href="https://www.facebook.com/sharer.php?u=https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/&amp;t=Tracer%20et%20dessiner" class="ico-after facebook blue light mobile-menu-link" rel="nofollow">
+                Facebook
+            </a><a href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/#share-to-mastodon" class="open-modal ico-after mastodon blue light mobile-menu-link" rel="nofollow">
+                Mastodon
+            </a><a href="http://sharetodiaspora.github.io/?url=https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/&amp;title=Tracer%20et%20dessiner" class="ico-after diaspora blue light mobile-menu-link" rel="nofollow">
+                Diaspora*
+            </a><a href="mailto:?subject=Tracer%20et%20dessiner&amp;body=https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/" class="ico-after email blue light mobile-menu-link" rel="nofollow">
+                Envoyer par mail
+            </a></div><div class="mobile-menu-bloc mobile-show-ico" data-title="Télécharger"><a href="https://zestedesavoir.com/tutoriels/html/944/a-la-decouverte-de-turtle.html" class="ico-after download blue light mobile-menu-link">
+                    HTML
+                    
+                        
+                            (126,3&nbsp;Kio)
+                        
+                    
+                </a><a href="https://zestedesavoir.com/tutoriels/pdf/944/a-la-decouverte-de-turtle.pdf" class="ico-after download blue light mobile-menu-link">
+                    PDF
+                    
+                        
+                            (1,6&nbsp;Mio)
+                        
+                    
+                </a><a href="https://zestedesavoir.com/tutoriels/tex/944/a-la-decouverte-de-turtle.tex" class="ico-after download blue light mobile-menu-link">
+                    LaTeX
+                    
+                        
+                            (114,0&nbsp;Kio)
+                        
+                    
+                </a><a href="https://zestedesavoir.com/tutoriels/epub/944/a-la-decouverte-de-turtle.epub" class="ico-after download blue light mobile-menu-link">
+                    EPUB
+                    
+                        
+                            (1,4&nbsp;Mio)
+                        
+                    
+                </a><a href="https://zestedesavoir.com/tutoriels/zip/944/a-la-decouverte-de-turtle.zip" class="ico-after download blue light mobile-menu-link">
+                    Archive
+                    
+                        
+                            (122,1&nbsp;Kio)
+                        
+                    
+                </a></div><div class="mobile-menu-bloc"></div></div>
+
+    
+
+
+    
+
+
+
+    <div class="page-container" style="width: 821px;">
+
+        <ul id="accessibility">
+            <li>
+                <a href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/#menu">Aller au menu</a>
+            </li>
+            <li>
+                <a href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/#content" accesskey="s">Aller au contenu</a>
+            </li>
+            <li>
+                <a href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/#search" accesskey="4">Aller à la recherche</a>
+            </li>
+        </ul>
+
+        <div id="cookies-eu-banner" style="display: block;">
+            <p>
+                Nous souhaitons déposer des cookies à des fins de mesure d'audience avec Google Analytics. Vous êtes libre d'accepter ou de refuser.
+            </p>
+            <a href="https://zestedesavoir.com/pages/cookies" id="cookies-eu-more">En savoir plus</a>
+            <button id="cookies-eu-accept">Accepter</button>
+            <button id="cookies-eu-reject">Refuser</button>
+        </div>
+
+        <div class="header-container">
+            
+
+
+
+
+
+
+
+
+
+<header>
+    <div class="mobile-menu-btn ico-after"></div>
+
+    
+    <div class="header-logo">
+        <a href="https://zestedesavoir.com/" class="header-logo-link">
+            Zeste de Savoir
+        </a>
+    </div>
+
+    <div class="header-mobile-page-title">
+        
+            Zeste de Savoir
+        
+    </div>
+
+    
+    <nav class="header-menu mobile-menu-imported" id="menu" data-title="Menu">
+
+        <ul class="header-menu-list">
+            <li>
+                <a href="https://zestedesavoir.com/bibliotheque/" class="mobile-menu-link has-dropdown">
+                    Bibliothèque
+                    <span class="arrow"></span>
+                </a>
+
+                
+                    <div class="dropdown header-menu-dropdown">
+                        <a href="https://zestedesavoir.com/bibliotheque/" class="dropdown-link-all">
+                            Accéder à tous les contenus de la bibliothèque
+                        </a>
+
+                        <ul class="dropdown-list">
+                            
+                            
+                                
+                                    <li>
+                                        <ul>
+                                            <li class="dropdown-title">
+                                                <a href="https://zestedesavoir.com/bibliotheque/informatique/">
+                                                    Informatique
+                                                </a>
+                                            </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/bibliotheque/informatique/autres-informatique/">
+                                                        Autres (informatique)
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/bibliotheque/informatique/bureautique-et-redaction/">
+                                                        Bureautique et rédaction
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/bibliotheque/informatique/site-web/">
+                                                        Développement Web
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/bibliotheque/informatique/materiel-et-electronique/">
+                                                        Matériel et électronique
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/bibliotheque/informatique/programmation-et-algorithmique/">
+                                                        Programmation et algorithmique
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/bibliotheque/informatique/systemes-dexploitation/">
+                                                        Systèmes d'exploitation
+                                                    </a>
+                                                </li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li>
+                                        <ul>
+                                            <li class="dropdown-title">
+                                                <a href="https://zestedesavoir.com/bibliotheque/sciences-de-la-nature/">
+                                                    Sciences de la nature
+                                                </a>
+                                            </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/bibliotheque/sciences-de-la-nature/astronomie/">
+                                                        Astronomie
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/bibliotheque/sciences-de-la-nature/autres-sciences-de-la-nature/">
+                                                        Autres (sciences de la nature)
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/bibliotheque/sciences-de-la-nature/biologie/">
+                                                        Biologie
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/bibliotheque/sciences-de-la-nature/chimie/">
+                                                        Chimie
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/bibliotheque/sciences-de-la-nature/mathematiques/">
+                                                        Mathématiques
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/bibliotheque/sciences-de-la-nature/physique/">
+                                                        Physique
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/bibliotheque/sciences-de-la-nature/geologie-et-geographie-physique/">
+                                                        Sciences de la terre
+                                                    </a>
+                                                </li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li>
+                                        <ul>
+                                            <li class="dropdown-title">
+                                                <a href="https://zestedesavoir.com/bibliotheque/sciences-humaines-et-sociales/">
+                                                    Sciences humaines et sociales
+                                                </a>
+                                            </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/bibliotheque/sciences-humaines-et-sociales/autres-sciences-humaines-et-sociales/">
+                                                        Autres (sciences humaines et sociales)
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/bibliotheque/sciences-humaines-et-sociales/droit/">
+                                                        Droit
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/bibliotheque/sciences-humaines-et-sociales/economie/">
+                                                        Économie
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/bibliotheque/sciences-humaines-et-sociales/histoire/">
+                                                        Histoire
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/bibliotheque/sciences-humaines-et-sociales/langues/">
+                                                        Langues
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/bibliotheque/sciences-humaines-et-sociales/psychologie/">
+                                                        Psychologie
+                                                    </a>
+                                                </li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li>
+                                        <ul>
+                                            <li class="dropdown-title">
+                                                <a href="https://zestedesavoir.com/bibliotheque/autres/">
+                                                    Autres
+                                                </a>
+                                            </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/bibliotheque/autres/arts-graphisme-et-multimedia/">
+                                                        Arts, graphisme et multimédia
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/bibliotheque/autres/autres/">
+                                                        Autres
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/bibliotheque/autres/communication-et-management/">
+                                                        Communication et management
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/bibliotheque/autres/zeste-de-savoir/">
+                                                        Zeste de Savoir
+                                                    </a>
+                                                </li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                
+                                    <li>
+                                        <ul>
+                                            <li class="dropdown-title">
+                                                Tags les plus utilisés
+                                            </li>
+                                            
+                                                <li><a href="https://zestedesavoir.com/bibliotheque/?tag=zds">zds</a></li>
+                                            
+                                                <li><a href="https://zestedesavoir.com/bibliotheque/?tag=math%C3%A9matiques">mathématiques</a></li>
+                                            
+                                                <li><a href="https://zestedesavoir.com/bibliotheque/?tag=algorithmique">algorithmique</a></li>
+                                            
+                                                <li><a href="https://zestedesavoir.com/bibliotheque/?tag=python">python</a></li>
+                                            
+                                                <li><a href="https://zestedesavoir.com/bibliotheque/?tag=physique">physique</a></li>
+                                            
+                                            <li><a href="https://zestedesavoir.com/contenus/tags/">Tous les tags</a></li>
+                                        </ul>
+                                    </li>
+                                
+                            
+                        </ul>
+                    </div>
+                
+            </li>
+            <li>
+                <a href="https://zestedesavoir.com/billets/" class="mobile-menu-link has-dropdown">
+                    Tribune
+                    <span class="arrow"></span>
+                </a>
+                
+                    <div class="dropdown header-menu-dropdown">
+                        <a href="https://zestedesavoir.com/billets/" class="dropdown-link-all">
+                            Tous les billets
+                        </a>
+
+                        <ul class="dropdown-list">
+                            
+                                
+                                    <li>
+                                        <ul>
+                                            <li class="dropdown-title">
+                                                Informatique
+                                            </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/billets/?category=autres-informatique">
+                                                        Autres (informatique)
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/billets/?category=bureautique-et-redaction">
+                                                        Bureautique et rédaction
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/billets/?category=site-web">
+                                                        Développement Web
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/billets/?category=materiel-et-electronique">
+                                                        Matériel et électronique
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/billets/?category=programmation-et-algorithmique">
+                                                        Programmation et algorithmique
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/billets/?category=systemes-dexploitation">
+                                                        Systèmes d'exploitation
+                                                    </a>
+                                                </li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li>
+                                        <ul>
+                                            <li class="dropdown-title">
+                                                Sciences de la nature
+                                            </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/billets/?category=astronomie">
+                                                        Astronomie
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/billets/?category=autres-sciences-de-la-nature">
+                                                        Autres (sciences de la nature)
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/billets/?category=biologie">
+                                                        Biologie
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/billets/?category=chimie">
+                                                        Chimie
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/billets/?category=mathematiques">
+                                                        Mathématiques
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/billets/?category=physique">
+                                                        Physique
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/billets/?category=geologie-et-geographie-physique">
+                                                        Sciences de la terre
+                                                    </a>
+                                                </li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li>
+                                        <ul>
+                                            <li class="dropdown-title">
+                                                Sciences humaines et sociales
+                                            </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/billets/?category=autres-sciences-humaines-et-sociales">
+                                                        Autres (sciences humaines et sociales)
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/billets/?category=droit">
+                                                        Droit
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/billets/?category=economie">
+                                                        Économie
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/billets/?category=histoire">
+                                                        Histoire
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/billets/?category=langues">
+                                                        Langues
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/billets/?category=psychologie">
+                                                        Psychologie
+                                                    </a>
+                                                </li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li>
+                                        <ul>
+                                            <li class="dropdown-title">
+                                                Autres
+                                            </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/billets/?category=arts-graphisme-et-multimedia">
+                                                        Arts, graphisme et multimédia
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/billets/?category=autres">
+                                                        Autres
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/billets/?category=communication-et-management">
+                                                        Communication et management
+                                                    </a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/billets/?category=zeste-de-savoir">
+                                                        Zeste de Savoir
+                                                    </a>
+                                                </li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                
+                                    <li>
+                                        <ul>
+                                            <li class="dropdown-title">
+                                                Tags les plus utilisés
+                                            </li>
+                                            
+                                                <li><a href="https://zestedesavoir.com/billets/?tag=python">python</a></li>
+                                            
+                                                <li><a href="https://zestedesavoir.com/billets/?tag=zds">zds</a></li>
+                                            
+                                                <li><a href="https://zestedesavoir.com/billets/?tag=musique">musique</a></li>
+                                            
+                                                <li><a href="https://zestedesavoir.com/billets/?tag=javascript">javascript</a></li>
+                                            
+                                                <li><a href="https://zestedesavoir.com/billets/?tag=langues">langues</a></li>
+                                            
+                                            <li><a href="https://zestedesavoir.com/contenus/tags/?type=opinion">Tous les tags</a></li>
+                                        </ul>
+                                    </li>
+                                
+                            
+                        </ul>
+                    </div>
+                
+            </li>
+            <li>
+                <a href="https://zestedesavoir.com/forums/" class="mobile-menu-link has-dropdown">
+                    Forum
+                    <span class="arrow"></span>
+                </a>
+                
+                    <div class="dropdown header-menu-dropdown">
+                        <a href="https://zestedesavoir.com/forums/" class="dropdown-link-all">
+                            Tous les forums
+                        </a>
+
+                        <ul class="dropdown-list">
+                            
+                                
+                                    <li>
+                                        <ul>
+                                            <li class="dropdown-title">
+                                                <a href="https://zestedesavoir.com/forums/savoirs/">
+                                                    Savoirs
+                                                </a>
+                                            </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/forums/savoirs/programmation/">Programmation</a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/forums/savoirs/site-web/">Développement Web</a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/forums/savoirs/multimedia-et-jeux-video/">Multimédia et Jeux vidéo</a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/forums/savoirs/systemes-et-materiels/">Systèmes et Matériels</a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/forums/savoirs/sciences/">Sciences</a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/forums/savoirs/autres-savoirs/">Les autres savoirs</a>
+                                                </li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                    <li>
+                                        <ul>
+                                            <li class="dropdown-title">
+                                                <a href="https://zestedesavoir.com/forums/communaute/">
+                                                    Communauté
+                                                </a>
+                                            </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/forums/communaute/bar-smoothies/">Le bar à smoothies</a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/forums/communaute/bug-suggestions/">Bugs et Suggestions</a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/forums/communaute/dev-zone/">Dev Zone</a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/forums/communaute/beta-zone/">Contenus en cours de rédaction</a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/forums/communaute/projets/">Vos projets</a>
+                                                </li>
+                                            
+                                                <li class="dropdown-list-element">
+                                                    <a href="https://zestedesavoir.com/forums/communaute/association/">L'association</a>
+                                                </li>
+                                            
+                                        </ul>
+                                    </li>
+                                
+                                
+                                    <li>
+                                        <ul>
+                                            <li class="dropdown-title">
+                                                Tags les plus utilisés
+                                            </li>
+                                            
+                                                
+                                                    <li class="dropdown-list-element">
+                                                        <a href="https://zestedesavoir.com/forums/sujets/tag/python/">python</a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                                    <li class="dropdown-list-element">
+                                                        <a href="https://zestedesavoir.com/forums/sujets/tag/c/">c++</a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                                    <li class="dropdown-list-element">
+                                                        <a href="https://zestedesavoir.com/forums/sujets/tag/php/">php</a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                                    <li class="dropdown-list-element">
+                                                        <a href="https://zestedesavoir.com/forums/sujets/tag/arduino/">arduino</a>
+                                                    </li>
+                                                
+                                            
+                                                
+                                                    <li class="dropdown-list-element">
+                                                        <a href="https://zestedesavoir.com/forums/sujets/tag/java/">java</a>
+                                                    </li>
+                                                
+                                            
+                                        </ul>
+                                    </li>
+                                
+                            
+                        </ul>
+                    </div>
+                
+            </li>
+        </ul>
+    </nav>
+
+
+    
+    <div class="logbox header-right unlogged">
+         
+            <a href="https://zestedesavoir.com/membres/connexion/?next=/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/">Connexion</a>
+            <a href="https://zestedesavoir.com/membres/inscription/">Inscription</a>
+        
+    </div>
+</header>
+
+
+            <div class="clearfix sub-header">
+                <div class="breadcrumb" itemprop="breadcrumb">
+                    <ol>
+                        <li>
+                            <a href="https://zestedesavoir.com/" rel="home" itemprop="url">
+                                <span itemprop="title">Accueil</span>
+                            </a>
+                        </li>
+                        
+    <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+        <a href="https://zestedesavoir.com/bibliotheque/?type=tutorial" itemprop="url">
+            <span itemprop="title">Tutoriels</span>
+        </a>
+    </li>
+
+                        
+    
+
+    
+        <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+            <span itemprop="title"><a href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/">À la découverte de turtle</a></span>
+        </li>
+    
+
+    <li>Tracer et dessiner</li>
+
+                    </ol>
+                </div>
+                <div class="search header-right mobile-menu-imported" id="search">
+                    <form action="https://zestedesavoir.com/rechercher/">
+                        <input type="text" name="q" placeholder="Rechercher" title="Contenu de la recherche">
+                        <button type="submit" class="ico-after search-submit" title="Lancer la recherche">OK</button>
+                    </form>
+                    <a href="https://zestedesavoir.com/rechercher/" title="Recherche avancée" class="search-more"></a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="main-container">
+            
+                <div class="main wrapper clearfix">
+                    <main class="content-container" role="main" id="content">
+                        
+                            
+
+
+
+                        
+
+                        
+    <article class="content-wrapper" itemscope="" itemtype="http://schema.org/Article">
+        <header>
+            
+    
+        <p class="license">
+            Licence CC BY-NC-SA
+        </p>
+    
+
+    <h1>
+        Tracer et dessiner
+    </h1>
+
+    
+
+
+
+
+
+
+
+
+
+
+    <ul class="taglist" itemprop="keywords">
+        
+            <li><a href="https://zestedesavoir.com/bibliotheque/?tag=python" rel="tag">python</a></li>
+        
+    </ul>
+
+
+
+    
+
+
+
+    <span class="pubdate">
+    
+        Dernière mise à jour&nbsp;:
+        <time datetime="2019-02-20T21:09:32" pubdate="pubdate" itemprop="dateModified">
+            mercredi 20 février 2019 à 21h09
+        </time>
+    
+    </span>
+
+
+
+<button class="btn btn-grey ico-after view open-zen-mode" data-content-on-click="Quitter la lecture zen">Lecture zen</button>
+
+<div class="authors">
+    <span class="authors-label">
+        Auteur&nbsp;:
+    </span>
+    <ul>
+        
+            <li>
+                
+
+
+
+
+    <a href="https://zestedesavoir.com/membres/voir/Smokiev/" class="member-item" itemscope="" itemtype="http://schema.org/Person" itemprop="author" rel="author"><img src="./Tracer et dessiner - À la découverte de turtle • Tutoriels • Zeste de Savoir_files/0315e297a777bbd80eec2483b6de2327" alt="" class="avatar" itemprop="image"><span itemprop="name">Smokiev</span></a>
+
+
+            </li>
+        
+
+        
+    </ul>
+    
+        
+    
+    <br>
+    <span class="authors-label">
+        Catégorie&nbsp;:
+    </span>
+    <ul>
+        
+            
+            
+                <a href="https://zestedesavoir.com/bibliotheque/?subcategory=programmation-et-algorithmique">Programmation et algorithmique</a>
+            
+        
+    </ul>
+    <br>
+    <span>
+        
+    </span>
+</div>
+
+
+    
+
+        </header>
+        
+            <section class="article-content">
+                
+    
+        
+
+
+
+    <ul class="pagination pagination-top pagination-chapter">
+        
+            <li class="prev">
+                <a href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/configurer-la-fenetre/" class="ico-after arrow-left" rel="prev">
+                    Configurer la fenêtre
+                </a>
+            </li>
+        
+        
+        
+            <li class="summary-button">
+                <a href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/">
+                    Sommaire
+                </a>
+            </li>        
+        
+        
+        
+            <li class="next">
+                <a href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/colorier/" class="ico-after arrow-right" rel="next">
+                    Colorier
+                </a>
+            </li>
+        
+    </ul>
+
+
+
+    
+    
+        
+
+
+
+
+
+    <p>Nous allons pouvoir entrer dans le vif du sujet ! À travers cette partie nous verrons comment tracer et dessiner des figures.</p>
+
+
+
+    <ul>
+        
+            <li>
+                <a href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/#1-se-reperer-et-tracer">
+                    Se repérer et tracer
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/#2-dessiner-des-figures-simples">
+                    Dessiner des figures simples
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/#3-dessiner-des-choses-plus-complexes">
+                    Dessiner des choses plus complexes
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/#4-tp-de-bien-jolis-dessins">
+                    TP : De bien jolis dessins
+                </a>
+            </li>
+        
+    </ul>
+
+
+
+    <h2 id="1-se-reperer-et-tracer">
+        <a href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/#1-se-reperer-et-tracer">
+            Se repérer et tracer
+        </a>
+    </h2>
+    
+        <p>Pour pouvoir se repérer dans la fenêtre, turtle met en place un repère à deux dimensions. Par défaut, celui-ci est centré dans la fenêtre. Ce repère nous permet de nous déplacer aisément de <em>x</em> sur l’axe des abscisses et de <em>y</em> sur l’axe des ordonnées. Le centre du repère, c’est-à-dire le point (x = 0, y = 0), est l’endroit où le curseur apparaît, sa maison en quelque sorte. Cela n’est pas bien compliqué à comprendre, il faut juste s’habituer à penser dans le plan. L’image suivante permet de mieux visualiser ce que nous venons de dire et comporte quelques exemples de points :</p>
+<figure><img src="./Tracer et dessiner - À la découverte de turtle • Tutoriels • Zeste de Savoir_files/8b076e47-f928-47a2-ba38-810e60aa0d25.png" alt="Le repère."><figcaption>Le repère.</figcaption></figure>
+<h4 id="nettoyer-lécran">Nettoyer l’écran<a aria-hidden="true" href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/#nettoyer-l%C3%A9cran"><span class="icon icon-link"></span></a></h4>
+<p>Au cours de notre utilisation de turtle, il est possible que nous ayons besoin de nettoyer l’écran. Pour cela, nous pouvons utiliser <code>clear</code> qui permet d’effacer ce que nous avons dessiné. En plus, nous pouvons aussi utiliser <code>reset</code> qui fait la même chose et réinitialise les valeurs du curseur à leurs valeurs par défaut (le crayon retourne à l’origine du repère, retrouve son orientation originale, sa largeur de trait par défaut, etc…). Ces deux fonctions ne modifient donc pas les configurations liées à la fenêtre, comme le titre ou la couleur de fond par exemple. Enfin, elles ne prennent aucun paramètre.</p>
+<div class="hljs-code-div"><div class="hljs-line-numbers"><span></span><span></span></div><pre><code class="hljs language-py">turtle.clear()  <span class="hljs-comment">#Efface les dessins du crayon</span>
+turtle.reset()  <span class="hljs-comment">#Fait de même et réinitialise le crayon</span>
+</code></pre></div>
+<h4 id="avancer-et-reculer">Avancer et reculer<a aria-hidden="true" href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/#avancer-et-reculer"><span class="icon icon-link"></span></a></h4>
+<p>Pour tracer, il faut se déplacer. Et pour déplacer le curseur, turtle nous offre plusieurs fonctions, comme <code>forward</code> et <code>backward</code>, respectivement pour avancer et reculer d’une distance que l’on passe en paramètre. Elles ont aussi chacune leur version abrégée, respectivement <code>fd</code>et <code>bk</code>. </p>
+<div class="hljs-code-div"><div class="hljs-line-numbers"><span></span><span></span><span></span><span></span></div><pre><code class="hljs language-py">turtle.forward(turtle.window_width()/<span class="hljs-number">3</span>)  <span class="hljs-comment">#Avance d'un tiers de la largeur de la fenêtre</span>
+turtle.backward(turtle.window_width()/<span class="hljs-number">2</span>)  <span class="hljs-comment">#Recule de la moitié de la largeur de la fenêtre</span>
+turtle.bk(<span class="hljs-number">50</span>)  <span class="hljs-comment">#Recule de 50px</span>
+turtle.fd(<span class="hljs-number">0</span>)  <span class="hljs-comment">#Avance de 0px, donc n'avance pas</span>
+</code></pre></div>
+<h4 id="se-déplacer-à-des-coordonnées-données">Se déplacer à des coordonnées données<a aria-hidden="true" href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/#se-d%C3%A9placer-%C3%A0-des-coordonn%C3%A9es-donn%C3%A9es"><span class="icon icon-link"></span></a></h4>
+<p>Avec <code>goto</code>, en lui fournissant une coordonnée <em>x</em> et une coordonnée <em>y</em>, nous pouvons nous rendre directement à un point (x, y) donné. De plus, nous pouvons aussi modifier uniquement la position en abscisse du curseur avec <code>setx</code> et la position en ordonnée avec <code>sety</code>, en leur passant la nouvelle valeur. Enfin, puisque nous avons parlé du centre du repère, notons que la fonction <code>home</code> permet d’y retourner.</p>
+<div class="hljs-code-div"><div class="hljs-line-numbers"><span></span><span></span><span></span><span></span></div><pre><code class="hljs language-py">turtle.goto(<span class="hljs-number">100</span>, <span class="hljs-number">100</span>)  <span class="hljs-comment">#Position (100, 100)</span>
+turtle.setx(<span class="hljs-number">20</span>)  <span class="hljs-comment">#Position(20, 100)</span>
+turtle.sety(<span class="hljs-number">-80</span>)  <span class="hljs-comment">#Position(20, -80)</span>
+turtle.home()  <span class="hljs-comment">#Position(0, 0) (équivalent à turtle.goto(0, 0))</span>
+</code></pre></div>
+<h4 id="lever-ou-baisser-le-crayon">Lever ou baisser le crayon<a aria-hidden="true" href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/#lever-ou-baisser-le-crayon"><span class="icon icon-link"></span></a></h4>
+<p>Si nous ne pouvions pas nous déplacer dans la fenêtre sans laisser de trace, ce ne serait pas très amusant. Or, la fonction <code>up</code> nous permet de lever le crayon tandis que la fonction <code>down</code> nous permet de l’abaisser. Elles ne prennent aucun paramètre. Grâce à elles, nous pouvons choisir de tracer ou non :</p>
+<div class="hljs-code-div"><div class="hljs-line-numbers"><span></span><span></span><span></span><span></span></div><pre><code class="hljs language-py">turtle.up()  <span class="hljs-comment">#Lève le crayon</span>
+turtle.forward(<span class="hljs-number">150</span>)  <span class="hljs-comment">#Avance de 150px sans tracer</span>
+turtle.down()  <span class="hljs-comment">#Abaisse le crayon</span>
+turtle.backward(<span class="hljs-number">50</span>)  <span class="hljs-comment">#Recule de 50px en traçant</span>
+</code></pre></div>
+<h4 id="changer-la-taille-du-traçage">Changer la taille du traçage<a aria-hidden="true" href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/#changer-la-taille-du-tra%C3%A7age"><span class="icon icon-link"></span></a></h4>
+<p>Faire des traits, c’est bien, mais pouvoir choisir la taille, c’est encore mieux. En passant la nouvelle largeur de nos traits à <code>pensize</code>, nous pouvons le faire. En ne passant rien, la fonction nous renvoie la taille actuelle.</p>
+<div class="hljs-code-div"><div class="hljs-line-numbers"><span></span><span></span><span></span></div><pre><code class="hljs language-py">print(turtle.pensize())  <span class="hljs-comment">#Affiche '1'</span>
+turtle.pensize(<span class="hljs-number">5.5</span>)  <span class="hljs-comment">#Modifie la largeur du traçage</span>
+print(turtle.pensize())  <span class="hljs-comment">#Affiche '5.5'</span>
+</code></pre></div>
+<p>Pour le moment, ce sont des fonctions plutôt basiques. Ce serait plus intéressant de pouvoir faire des figures, en assemblant les traits, et c’est ce que nous allons faire dans la section suivante !</p>
+    
+
+    <h2 id="2-dessiner-des-figures-simples">
+        <a href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/#2-dessiner-des-figures-simples">
+            Dessiner des figures simples
+        </a>
+    </h2>
+    
+        <p>Jusqu’à présent, nous avons vu comment ouvrir une fenêtre et comment nous déplacer dans celle-ci. À présent, nous allons aller encore plus loin en dessinant nos premières figures.</p>
+<h4 id="changer-langle">Changer l’angle<a aria-hidden="true" href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/#changer-langle"><span class="icon icon-link"></span></a></h4>
+<p>Pour dessiner aisément, il nous manque tout de même quelque chose, et je pense que vous vous en êtes rendu compte : il faut que l’on puisse choisir l’inclinaison de notre trait, c’est-à-dire l’angle. En effet, jusqu’à présent nous avons été limités dans nos déplacements.</p>
+<p>Or, turtle nous permet justement de faire varier la direction du curseur. Par défaut, lorsque l’on ouvre une fenêtre avec turtle, le crayon est orienté vers l’Est : l’angle est de 0 (ou 360). Pour jouer avec les angles, nous avons les fonctions <code>right</code> et <code>left</code> qui permettent de tourner respectivement vers la droite ou vers la gauche d’un angle passé. Parfois, il est plus simple d’utiliser <code>setheading</code> qui change directement l’angle avec la valeur passée. Vous pouvez aussi connaître la direction actuelle de votre crayon en utilisant la fonction <code>heading</code> qui ne prend aucun paramètre. Toutes ces explications sont illustrées avec l’image ci-dessous ainsi que par l’exemple qui la suit :</p>
+<figure><img src="./Tracer et dessiner - À la découverte de turtle • Tutoriels • Zeste de Savoir_files/ce101acd-a2d8-42a3-8785-8d1f82759f1d.png" alt="L&#39;orientation."><figcaption>L'orientation.</figcaption></figure>
+<div class="hljs-code-div"><div class="hljs-line-numbers"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><pre><code class="hljs language-py">turtle.setup()  <span class="hljs-comment">#Initialise la fenêtre </span>
+print(turtle.heading())  <span class="hljs-comment">#Affiche 0.0 : le crayon pointe vers le point bleu : Est</span>
+turtle.left(<span class="hljs-number">90</span>)  <span class="hljs-comment">#Pointe vers le point jaune : Nord</span>
+turtle.right(<span class="hljs-number">270</span>)  <span class="hljs-comment">#Pointe vers le point vert : Ouest</span>
+turtle.setheading(<span class="hljs-number">0</span>)  <span class="hljs-comment">#Pointe de nouveau vers le point bleu</span>
+turtle.setheading(<span class="hljs-number">-90</span>)  <span class="hljs-comment">#Pointe à l'opposé du point jaune : Sud</span>
+print(turtle.heading())  <span class="hljs-comment">#Affiche '270.0'</span>
+</code></pre></div>
+<p>Concrètement, vous conviendrez que nous sommes désormais beaucoup plus libres. N’hésitez pas à essayer et à vous approprier ces notions, car elles seront vraiment utiles pour la suite. Voici un exemple d’utilisation de ce que l’on vient d’apprendre :</p>
+<p><strong>Code :</strong></p>
+<a class="spoiler-title ico-after view" href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/#">Afficher/Masquer le contenu masqué</a><div class="custom-block custom-block-spoiler spoiler-build"><div class="custom-block-body"><div class="hljs-code-div"><div class="hljs-line-numbers"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><pre><code class="hljs language-py"><span class="hljs-comment">#!/usr/bin/env python3</span>
+
+<span class="hljs-keyword">import</span> turtle
+
+LARGEUR, HAUTEUR = <span class="hljs-number">640</span>, <span class="hljs-number">480</span>
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">"__main__"</span>:
+    turtle.forward(LARGEUR/<span class="hljs-number">3</span>)  <span class="hljs-comment">#Avance de d'un tiers de la largeur</span>
+    turtle.left(<span class="hljs-number">80</span>)  <span class="hljs-comment">#Tourne de 80° à gauche</span>
+    turtle.up()  <span class="hljs-comment">#Lève le curseur</span>
+    turtle.forward(HAUTEUR/<span class="hljs-number">4</span>)  <span class="hljs-comment">#Avance d'un quart de la hauteur</span>
+    turtle.down()  <span class="hljs-comment">#Baisse le curseur</span>
+    turtle.right(<span class="hljs-number">180</span>)  <span class="hljs-comment">#Tourne à 180 à droite</span>
+    turtle.backward(HAUTEUR/<span class="hljs-number">4</span>)  <span class="hljs-comment">#Recule d'un quart de la hauteur</span>
+    turtle.pensize(<span class="hljs-number">3</span>)  <span class="hljs-comment">#Change l'épaisseur du tracé</span>
+    turtle.home()  <span class="hljs-comment">#Retourne à la maison</span>
+    turtle.exitonclick()  <span class="hljs-comment">#Clique gauche pour fermer </span>
+</code></pre></div></div></div>
+<figure><img src="./Tracer et dessiner - À la découverte de turtle • Tutoriels • Zeste de Savoir_files/40da9776-4e1f-41a8-83f2-44f3b479f9ec.png" alt="Résultat exemple d&#39;utilisation des angles."><figcaption>Résultat exemple d'utilisation des angles.</figcaption></figure>
+<p>Notons au passage que <code>home</code> réinitialise aussi l’orientation en plus de la position, c’est pourquoi nous voyons que le curseur a un angle de 0 à la fin puisque nous terminons le traitement par cela.</p>
+<p>Pour terminer sur les angles, nous pouvons brièvement parler de la fonction <code>towards</code> qui prend en paramètre les coordonnées d’un point et nous retourne l’angle qu’il faudrait pour aller à ce point. Ainsi, ces deux morceaux de code donnent quasiment le même résultat (dans le second cas, l’angle final est celui d’avant l’appel à la fonction)</p>
+<div class="hljs-code-div"><div class="hljs-line-numbers"><span></span><span></span><span></span><span></span></div><pre><code class="hljs language-py">angle = turtle.towards(<span class="hljs-number">0</span>, <span class="hljs-number">90</span>)
+print(angle)  <span class="hljs-comment">#Affiche '90.0'</span>
+turtle.setheading(angle)  <span class="hljs-comment">#Angle : 90.0</span>
+turtle.forward(<span class="hljs-number">90</span>)  <span class="hljs-comment">#Position : (0, 90); Angle : 90.0</span>
+</code></pre></div>
+<div class="hljs-code-div"><div class="hljs-line-numbers"><span></span></div><pre><code class="hljs language-py">turtle.goto(<span class="hljs-number">0</span>, <span class="hljs-number">90</span>)  <span class="hljs-comment">#Position : (0, 90); Angle : 0.0</span>
+</code></pre></div>
+<h4 id="dessiner-des-figures-simples">Dessiner des figures simples<a aria-hidden="true" href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/#dessiner-des-figures-simples"><span class="icon icon-link"></span></a></h4>
+<p>Voilà, nous sommes désormais totalement capable de tracer nos propres figures grâce à ce que nous avons appris. Nous allons donc nous exercer en faisant quelques polygones. Triangle équilatérale, carré et octogone régulier seront nos invités. Avant que vous lisiez la suite, je vous encourage à essayer de dessiner par vous-mêmes ces figures. </p>
+<p>Commençons avec le triangle équilatéral. Pour rappel, un triangle équilatéral est un triangle dont les côtés ont la même longueur ce qui implique que chaque angle a une valeur de 60° (par définition, la somme des angles d’un triangle vaut 180°). Une fois que l’on a cela en tête, nous pouvons implémenter une solution explicite :</p>
+<div class="hljs-code-div"><div class="hljs-line-numbers"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><pre><code class="hljs language-py"><span class="hljs-comment">#Un exemple de triangle équilatéral</span>
+longueur_cote = <span class="hljs-number">200</span>
+turtle.forward(longueur_cote)  <span class="hljs-comment">#1er côté</span>
+turtle.left(<span class="hljs-number">360</span>/<span class="hljs-number">3</span>)  <span class="hljs-comment">#Angle</span>
+turtle.forward(longueur_cote)  <span class="hljs-comment">#2ème côté</span>
+turtle.left(<span class="hljs-number">360</span>/<span class="hljs-number">3</span>)  <span class="hljs-comment">#Angle</span>
+turtle.forward(longueur_cote)  <span class="hljs-comment">#3ème côté</span>
+</code></pre></div>
+<p>Pour le carré et l’octogone, nous appliquerons le même principe. Pour le carré, nous avons quatre côtés de même longueur ainsi que quatre angle de 90°. Voici une solution :</p>
+<div class="hljs-code-div"><div class="hljs-line-numbers"><span></span><span></span><span></span><span></span><span></span></div><pre><code class="hljs language-py"><span class="hljs-comment">#Un exemple de carré</span>
+longueur_cote = <span class="hljs-number">200</span>
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">4</span>):
+    turtle.forward(longueur_cote)  <span class="hljs-comment">#Côté</span>
+    turtle.left(<span class="hljs-number">90</span>)  <span class="hljs-comment">#Angle</span>
+</code></pre></div>
+<p>L’octogone a quant à lui 8 côtés et des angles de 45° (360° divisé par 8 côtés). Une solution est :</p>
+<div class="hljs-code-div"><div class="hljs-line-numbers"><span></span><span></span><span></span><span></span><span></span></div><pre><code class="hljs language-py"><span class="hljs-comment">#Un exemple d'octogone</span>
+longueur_cote = <span class="hljs-number">100</span>
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">8</span>):
+    turtle.forward(longueur_cote)  <span class="hljs-comment">#Côté</span>
+    turtle.left(<span class="hljs-number">360</span>/<span class="hljs-number">8</span>)  <span class="hljs-comment">#Angle</span>
+</code></pre></div>
+<figure><img src="./Tracer et dessiner - À la découverte de turtle • Tutoriels • Zeste de Savoir_files/17f883d5-8831-4cd7-b2ca-a782e81027cc.png" alt="Résultats pour ces figures."><figcaption>Résultats pour ces figures.</figcaption></figure>
+<p>Voilà, pour pratiquer, vous pouvez essayer de dessiner des figures plus compliquées voire de généraliser au cas d’un polygone, ou encore de dessiner à d’autres endroits que depuis le centre du repère. Il est temps de parler d’une dernière figure dont nous n’avons pas encore parlée : le cercle.</p>
+<h4 id="utiliser-les-cercles">Utiliser les cercles<a aria-hidden="true" href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/#utiliser-les-cercles"><span class="icon icon-link"></span></a></h4>
+<p>Pour les cercles, nous pouvons éviter de réinventer la roue puisqu’il existe une fonction déjà toute prête : <code>circle</code>. Au minimum, nous devons passer à celle-ci le rayon de notre cercle. De plus, nous pouvons aussi lui passer un angle (<em>extent</em>) qui permet de tracer uniquement une partie du cercle, ainsi qu’un nombre (<em>steps</em>) qui correspond au nombre d’étapes pour tracer. L’orientation du crayon a des conséquences sur la manière dont le cercle sera tracé. Pour mieux comprendre, voyons ce que ça peut donner :</p>
+<div class="hljs-code-div"><div class="hljs-line-numbers"><span></span><span></span><span></span><span></span></div><pre><code class="hljs language-py">turtle.circle(<span class="hljs-number">120</span>)  <span class="hljs-comment">#Trace un cercle de rayon 120px</span>
+turtle.circle(<span class="hljs-number">70</span>, <span class="hljs-number">180</span>)  <span class="hljs-comment">#Trace un demi-cercle de rayon 70px</span>
+turtle.circle(<span class="hljs-number">90</span>, steps = <span class="hljs-number">8</span>)  <span class="hljs-comment">#Trace un octogone de longueur 90px</span>
+turtle.circle(<span class="hljs-number">40</span>, <span class="hljs-number">180</span>, <span class="hljs-number">4</span>)  <span class="hljs-comment">#Trace la moitié d'un octogone de longueur 40px</span>
+</code></pre></div>
+<p>Voici un exemple de code pour afficher cinq cercles du plus petit au plus grand, avec pour centre l’origine du repère :</p>
+<p><strong>Code :</strong></p>
+<a class="spoiler-title ico-after view" href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/#">Afficher/Masquer le contenu masqué</a><div class="custom-block custom-block-spoiler spoiler-build"><div class="custom-block-body"><div class="hljs-code-div"><div class="hljs-line-numbers"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><pre><code class="hljs language-py"><span class="hljs-comment">#!/usr/bin/env python3</span>
+
+<span class="hljs-keyword">import</span> turtle
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">"__main__"</span>:
+    rayon, ecart = <span class="hljs-number">50</span>, <span class="hljs-number">20</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">5</span>):
+        turtle.up()
+        turtle.goto(<span class="hljs-number">0</span>, -rayon)
+        turtle.down()
+        turtle.circle(rayon)
+        rayon += ecart  <span class="hljs-comment">#Augmente la valeur de rayon</span>
+    turtle.up()
+    turtle.home()
+    turtle.exitonclick()
+</code></pre></div></div></div>
+<figure><img src="./Tracer et dessiner - À la découverte de turtle • Tutoriels • Zeste de Savoir_files/b380e269-0eda-46f5-9899-1bb2abbf8ec8.png" alt="Résultat exemple cercles."><figcaption>Résultat exemple cercles.</figcaption></figure>
+<p>Voilà, nous savons désormais dessiner des figures simples. Dans la section suivante, nous allons complexifier nos figures.</p>
+    
+
+    <h2 id="3-dessiner-des-choses-plus-complexes">
+        <a href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/#3-dessiner-des-choses-plus-complexes">
+            Dessiner des choses plus complexes
+        </a>
+    </h2>
+    
+        <h4 id="un-dessin-plus-complexe-1">Un dessin plus complexe (1)<a aria-hidden="true" href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/#un-dessin-plus-complexe-1"><span class="icon icon-link"></span></a></h4>
+<p>Grâce à ce que nous venons d’apprendre, nous pouvons désormais réaliser des figures plus complexes, comme le montre l’image suivante par exemple. Pour réaliser cela, j’ai utilisé deux fonctions que nous n’avons pas encore vues. Tout d’abord, la fonction <code>position</code>, qui ne prend aucun paramètre et retourne, comme son nom l’indique, la position du crayon. Ensuite, j’ai aussi fait appel à la fonction <code>distance</code> qui prend en paramètre les coordonnées <em>x</em> et <em>y</em> d’un point et qui retourne la distance entre le curseur et ce point. De cette manière, j’ai pu connaître facilement la distance entre le centre du dessin, le point (0, 0) et le coin des petits carrés par lesquels je souhaitais faire passer le cercle : c’est-à-dire le rayon. Remarquez que le dessin a pour centre le centre du repère.</p>
+<figure><img src="./Tracer et dessiner - À la découverte de turtle • Tutoriels • Zeste de Savoir_files/475380d9-86cd-4fbf-a8e5-cf2c1d8b7e6e.png" alt="Un dessin un peu plus complexe."><figcaption>Un dessin un peu plus complexe.</figcaption></figure>
+<p>Concernant le code, nous commençons par tracer le grand carré, puis les quatre petits, et nous terminons par le cercle. L’ensemble a pour centre le point d’origine du repère. Pour tracer chaque carré, nous nous plaçons à son coin bas gauche. Les commentaires vous aideront à comprendre. Si vous avez du mal, n’hésitez pas à prendre une feuille de papier et un crayon pour vous aider à visualiser.</p>
+<p><strong>Code :</strong></p>
+<a class="spoiler-title ico-after view" href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/#">Afficher/Masquer le contenu masqué</a><div class="custom-block custom-block-spoiler spoiler-build" style="display: block;"><div class="custom-block-body"><div class="hljs-code-div"><div class="hljs-line-numbers"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><pre><code class="hljs language-py"><span class="hljs-comment">#!/usr/bin/env python3</span>
+
+<span class="hljs-keyword">import</span> turtle
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">deplacer_sans_tracer</span><span class="hljs-params">(x, y = None)</span>:</span>
+    <span class="hljs-string">"""Fonction pour se déplacer à un point sans tracer"""</span>
+    turtle.up()
+    <span class="hljs-keyword">if</span> (isinstance(x, tuple) <span class="hljs-keyword">or</span> isinstance(x, list)) <span class="hljs-keyword">and</span> len(x) == <span class="hljs-number">2</span>:
+        turtle.goto(x)
+    <span class="hljs-keyword">else</span>:
+        turtle.goto(x, y)
+    turtle.down()
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">triangle_dans_carre</span><span class="hljs-params">(long_carre)</span>:</span>
+    <span class="hljs-string">"""Fonction pour tracer un triangle à l'intérieur du carré"""</span>
+    <span class="hljs-comment">#On prend la position du curseur qui est sur le coin bas gauche</span>
+    pos_coin_bg = turtle.position()
+    <span class="hljs-comment">#On trace les deux traits restants, la base étant déjà faite</span>
+    turtle.goto(pos_coin_bg[<span class="hljs-number">0</span>]+long_carre/<span class="hljs-number">2</span>, pos_coin_bg[<span class="hljs-number">1</span>]+long_carre)
+    turtle.goto(pos_coin_bg[<span class="hljs-number">0</span>]+long_carre, pos_coin_bg[<span class="hljs-number">1</span>])
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">carre_avec_triangle</span><span class="hljs-params">(longueur)</span>:</span>
+    <span class="hljs-string">"""Fonction pour tracer un carré avec un triangle à l'intérieur"""</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">4</span>):
+        turtle.forward(longueur)
+        turtle.left(<span class="hljs-number">90</span>)
+    triangle_dans_carre(longueur)
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">"__main__"</span>:
+    <span class="hljs-comment">#On initialise les longueurs du grand carré et des petits carrés</span>
+    longueur_1, longueur_2 = <span class="hljs-number">150</span>, <span class="hljs-number">75</span>
+    <span class="hljs-comment">#On se positionne au coin bas gauche de notre futur grand carré</span>
+    deplacer_sans_tracer(-longueur_1/<span class="hljs-number">2</span>, -longueur_1/<span class="hljs-number">2</span>)
+    <span class="hljs-comment">#On le dessine</span>
+    carre_avec_triangle(longueur_1)
+    <span class="hljs-comment">#On prépare les valeurs des coin bas gauche des petits carrés</span>
+    coins = [(longueur_1/<span class="hljs-number">2</span>, longueur_1/<span class="hljs-number">2</span>),
+             (-longueur_1/<span class="hljs-number">2</span>-longueur_2, longueur_1/<span class="hljs-number">2</span>),
+             (-longueur_1/<span class="hljs-number">2</span>-longueur_2, -longueur_1/<span class="hljs-number">2</span>-longueur_2),
+             (longueur_1/<span class="hljs-number">2</span>, -longueur_1/<span class="hljs-number">2</span>-longueur_2)]
+    <span class="hljs-comment">#On dessine notre quatre petits carrés</span>
+    <span class="hljs-keyword">for</span> coin <span class="hljs-keyword">in</span> coins:
+        deplacer_sans_tracer(coin)
+        carre_avec_triangle(longueur_2)
+    <span class="hljs-comment">#On retourne au centre de notre dessin</span>
+    deplacer_sans_tracer(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>)
+    <span class="hljs-comment">#On prend la distance entre le centre et le coin par lequel le cercle passera</span>
+    rayon = turtle.distance(longueur_1/<span class="hljs-number">2</span>+longueur_2, longueur_1/<span class="hljs-number">2</span>+longueur_2)
+    <span class="hljs-comment">#On se déplace et on trace notre cercle</span>
+    deplacer_sans_tracer(<span class="hljs-number">0</span>, -rayon)
+    turtle.circle(rayon)
+    <span class="hljs-comment">#On retourne à la maison, et on prend un angle de 90°</span>
+    deplacer_sans_tracer(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>)
+    turtle.left(<span class="hljs-number">90</span>)
+    turtle.exitonclick()
+</code></pre></div></div></div>
+<h4 id="les-points">Les points<a aria-hidden="true" href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/#les-points"><span class="icon icon-link"></span></a></h4>
+<p>La fonction <code>dot</code> nous permet d’afficher un point dans le canvas. Pour cela, nous pouvons passer en paramètre le diamètre du point, et nous pouvons aussi, si le cœur nous en dit, passer une couleur. Si nous ne lui passons rien, le point aura un diamètre par défaut et la couleur de traçage du curseur (noir par défaut). Nous étudierons le coloriage plus en détails dans la partie suivante.</p>
+<div class="hljs-code-div"><div class="hljs-line-numbers"><span></span><span></span><span></span></div><pre><code class="hljs language-py">turtle.dot(<span class="hljs-number">100</span>, <span class="hljs-string">'red'</span>)  <span class="hljs-comment">#Imprime un point rouge d'un diamètre de 100px</span>
+turtle.dot(<span class="hljs-number">50</span>, <span class="hljs-string">'yellow'</span>)  <span class="hljs-comment">#Imprime un point jaune d'un diamètre de 50px</span>
+turtle.dot(<span class="hljs-number">25</span>)  <span class="hljs-comment">#Imprime un point noir d'un diamètre de 25px</span>
+</code></pre></div>
+<p>Remarquons que si nous avions imprimé les points dans l’ordre inverse, nous n’aurions vu que le rouge puisque celui aurait masqué le jaune qui lui-même aurait masqué le noir. Nous pouvons aussi noter qu’un point sera tracé même si le crayon est levé.</p>
+<p>Puisque comme d’habitude, rien ne nous empêche de jouer avec ce que nous apprenons, voici un programme qui imprime dix points de plus petit en plus grand en allant de gauche à droite et qui ont une couleur différente :</p>
+<p><strong>Code :</strong></p>
+<a class="spoiler-title ico-after view" href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/#">Afficher/Masquer le contenu masqué</a><div class="custom-block custom-block-spoiler spoiler-build"><div class="custom-block-body"><div class="hljs-code-div"><div class="hljs-line-numbers"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><pre><code class="hljs language-py"><span class="hljs-comment">#!/usr/bin/env python3</span>
+
+<span class="hljs-keyword">import</span> turtle
+<span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> randint
+
+COULEURS = [<span class="hljs-string">'black'</span>, <span class="hljs-string">'grey'</span>, <span class="hljs-string">'brown'</span>, <span class="hljs-string">'orange'</span>, <span class="hljs-string">'pink'</span>, <span class="hljs-string">'purple'</span>,
+            <span class="hljs-string">'red'</span>, <span class="hljs-string">'blue'</span>, <span class="hljs-string">'yellow'</span>, <span class="hljs-string">'green'</span>]
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">"__main__"</span>:
+    turtle.setup(<span class="hljs-number">650</span>, <span class="hljs-number">100</span>)
+    diametre = <span class="hljs-number">15</span>
+    turtle.up(); turtle.setx(-turtle.window_width()/<span class="hljs-number">2</span>+<span class="hljs-number">2</span>*diametre); turtle.down()
+    <span class="hljs-comment">#Pour le nombre de couleurs disponibles</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(COULEURS)):
+        <span class="hljs-comment">#On choisit un couleur aléatoirement</span>
+        index_choisi = randint(<span class="hljs-number">0</span>, len(COULEURS)<span class="hljs-number">-1</span>)
+        <span class="hljs-comment">#On imprime un point de cette couleur</span>
+        turtle.dot(diametre, COULEURS[index_choisi])
+        <span class="hljs-comment">#On supprime la couleur choisie pour éviter de la rechoisir</span>
+        <span class="hljs-keyword">del</span> COULEURS[index_choisi]
+        <span class="hljs-comment">#On met à jour le diamètre et on se déplace pour le prochain point</span>
+        diametre += <span class="hljs-number">5</span>; turtle.up(); turtle.fd(<span class="hljs-number">1.5</span>*diametre); turtle.down()
+    turtle.exitonclick()
+</code></pre></div></div></div>
+<figure><img src="./Tracer et dessiner - À la découverte de turtle • Tutoriels • Zeste de Savoir_files/ece35cb9-feb9-450e-af46-51f3b9e718f5.png" alt="Résultat exemple de points."><figcaption>Résultat exemple de points.</figcaption></figure>
+<h4 id="les-tampons">Les tampons<a aria-hidden="true" href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/#les-tampons"><span class="icon icon-link"></span></a></h4>
+<p>Les points, ce n’est pas tout ! Nous pouvons aussi, de la même manière, imprimer la forme du curseur avec <code>stamp</code>. Cette fonction ne prend aucun paramètre et retourne l’identifiant du tampon. Ce dernier nous sert à supprimer le tampon de la fenêtre en le passant à <code>clearstamp</code>. Nous pouvons aussi supprimer plusieurs tampons de l’écran en fournissant un nombre à <code>clearstamps</code>, voire tous en ne lui passant aucune valeur ou <em>None</em>. Voici ci-dessous un exemple d’utilisation illustré :</p>
+<div class="hljs-code-div"><div class="hljs-line-numbers"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><pre><code class="hljs language-py">id_tampons = []
+<span class="hljs-comment">#L'opération suivante est répétée à maintes reprises tout en se déplaçant</span>
+id_tampons.append(turtle.stamp())  <span class="hljs-comment">#Tamponne et on enregistre l'identifiant</span>
+turtle.clearstamp(id_tampons[<span class="hljs-number">14</span>])  <span class="hljs-comment">#Supprime le 15ème tampon</span>
+turtle.clearstamps(<span class="hljs-number">9</span>)  <span class="hljs-comment">#Supprime les 9 premiers tampons</span>
+turtle.clearstamps(<span class="hljs-number">-10</span>)  <span class="hljs-comment">#Supprime les 10 derniers tampons</span>
+turtle.clearstamps()  <span class="hljs-comment">#Supprime tous les tampons restants</span>
+</code></pre></div>
+<figure><img src="./Tracer et dessiner - À la découverte de turtle • Tutoriels • Zeste de Savoir_files/14420583-7b8f-49c8-81c2-0f49dbd7f266.png" alt="Résultat exemple tampon aux différentes étapes."><figcaption>Résultat exemple tampon aux différentes étapes.</figcaption></figure>
+<h4 id="un-dessin-plus-complexe-2">Un dessin plus complexe (2)<a aria-hidden="true" href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/#un-dessin-plus-complexe-2"><span class="icon icon-link"></span></a></h4>
+<p>Voici un autre exemple un peu plus complexe. Ici, nous dessinons un ciel étoilé. Pour ce faire, nous avons codé une fonction <code>etoile</code> qui se charge de tracer une étoile d’une longueur donnée, et nous allons nous en servir dans la boucle principale, tout en veillant à ce que l’étoile ne soit pas dessinée hors de notre fenêtre. Nous pourrions améliorer le code pour éviter qu’une étoile soit tracée par dessus une autre par exemple.</p>
+<a class="spoiler-title ico-after view" href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/#">Afficher/Masquer le contenu masqué</a><div class="custom-block custom-block-spoiler spoiler-build"><div class="custom-block-body"><div class="hljs-code-div"><div class="hljs-line-numbers"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><pre><code class="hljs language-py"><span class="hljs-comment">#!/usr/bin/env python3</span>
+
+<span class="hljs-keyword">import</span> turtle
+<span class="hljs-keyword">from</span> random <span class="hljs-keyword">import</span> randint
+
+LARGEUR, HAUTEUR = <span class="hljs-number">640</span>, <span class="hljs-number">480</span>
+LONGUEUR_MIN, LONGUEUR_MAX = <span class="hljs-number">5</span>, <span class="hljs-number">20</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">deplacer_sans_tracer</span><span class="hljs-params">(x, y = None)</span>:</span>
+    <span class="hljs-string">"""Fonction pour se déplacer à un point sans tracer"""</span>
+    turtle.up()
+    <span class="hljs-keyword">if</span> (isinstance(x, tuple) <span class="hljs-keyword">or</span> isinstance(x, list)) <span class="hljs-keyword">and</span> len(x) == <span class="hljs-number">2</span>:
+        turtle.goto(x)
+    <span class="hljs-keyword">else</span>:
+        turtle.goto(x, y)
+    turtle.down()
+        
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">etoile</span><span class="hljs-params">(longueur)</span>:</span>
+    <span class="hljs-string">"""Fonction pour dessiner une étoile"""</span>
+    turtle.setheading(<span class="hljs-number">180</span><span class="hljs-number">-2</span>*<span class="hljs-number">72</span>)
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">5</span>):
+        turtle.forward(longueur)
+        turtle.left(<span class="hljs-number">180</span><span class="hljs-number">-180</span>/<span class="hljs-number">5</span>)
+        
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">"__main__"</span>:
+    turtle.setup(LARGEUR, HAUTEUR)
+    turtle.speed(<span class="hljs-number">0</span>) <span class="hljs-comment">#Met la vitesse de traçage la plus rapide</span>
+    nb_etoiles, longueur_etoile = <span class="hljs-number">20</span>, <span class="hljs-number">0</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(nb_etoiles):
+        longueur_etoile = randint(LONGUEUR_MIN, LONGUEUR_MAX)
+        deplacer_sans_tracer(randint(-LARGEUR//<span class="hljs-number">2</span>+LONGUEUR_MAX//<span class="hljs-number">2</span>, LARGEUR//<span class="hljs-number">2</span>-LONGUEUR_MAX),
+                             randint(-HAUTEUR//<span class="hljs-number">2</span>+LONGUEUR_MAX//<span class="hljs-number">2</span>, HAUTEUR//<span class="hljs-number">2</span>-LONGUEUR_MAX))
+        etoile(longueur_etoile)
+    deplacer_sans_tracer(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>)
+    turtle.exitonclick()
+</code></pre></div></div></div>
+<figure><img src="./Tracer et dessiner - À la découverte de turtle • Tutoriels • Zeste de Savoir_files/7ea259f4-4f20-457b-995c-e937ba6026b4.png" alt="Un ciel étoilé."><figcaption>Un ciel étoilé.</figcaption></figure>
+<p>Voilà, j’espère que vous avez suivi avec attention, car c’est le moment de mettre tout cela en pratique !</p>
+    
+
+    <h2 id="4-tp-de-bien-jolis-dessins">
+        <a href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/#4-tp-de-bien-jolis-dessins">
+            TP : De bien jolis dessins
+        </a>
+    </h2>
+    
+        <p>Nous voilà aux travaux pratiques de cette partie ! C’est le moment de vérifier que vous savez dessiner avec ce que nous avons appris. Pour ce faire, il y aura deux exercices où il faudra coder le programme permettant de reproduire le dessin (ne vous souciez pas des longueurs). Si vous êtes bloqué, n’hésitez pas à retourner voir ce que nous avons précédemment pour vous aider et à procéder par étapes. Enfin, lors du troisième exercice, nous nous intéresserons au Flocon de Von Koch.</p>
+<h4 id="exercice-1">Exercice 1<a aria-hidden="true" href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/#exercice-1"><span class="icon icon-link"></span></a></h4>
+<p>Voici la première figure à reproduire :</p>
+<figure><img src="./Tracer et dessiner - À la découverte de turtle • Tutoriels • Zeste de Savoir_files/fbc41deb-627c-436c-b95d-6b4b03bdb052.png" alt="Exercice 1. "><figcaption>Exercice 1. </figcaption></figure>
+<p>La <strong>correction :</strong></p>
+<a class="spoiler-title ico-after view" href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/#">Afficher/Masquer le contenu masqué</a><div class="custom-block custom-block-spoiler spoiler-build"><div class="custom-block-body"><div class="hljs-code-div"><div class="hljs-line-numbers"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><pre><code class="hljs language-py"><span class="hljs-comment">#!/usr/bin/env python3</span>
+
+<span class="hljs-keyword">import</span> turtle
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">deplacer_sans_tracer</span><span class="hljs-params">(x, y = None)</span>:</span>
+    <span class="hljs-string">"""Fonction pour se déplacer à un point sans tracer"""</span>
+    turtle.up()
+    <span class="hljs-keyword">if</span> (isinstance(x, tuple) <span class="hljs-keyword">or</span> isinstance(x, list)) <span class="hljs-keyword">and</span> len(x) == <span class="hljs-number">2</span>:
+        turtle.goto(x)
+    <span class="hljs-keyword">else</span>:
+        turtle.goto(x, y)
+    turtle.down()
+        
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">carre</span><span class="hljs-params">(longueur)</span>:</span>
+    <span class="hljs-string">"""Fonction pour tracer un carré depuis le coin bas gauche"""</span>
+    <span class="hljs-keyword">for</span> nb_cote <span class="hljs-keyword">in</span> range(<span class="hljs-number">4</span>):
+        turtle.forward(longueur)
+        turtle.left(<span class="hljs-number">90</span>)
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">point_octogone</span><span class="hljs-params">(longueur, diametre = <span class="hljs-number">5</span>, couleur = <span class="hljs-string">'black'</span>)</span>:</span>
+    <span class="hljs-string">"""Fonction pour faire les points des sommets d'un octogone"""</span>
+    <span class="hljs-keyword">for</span> nb_cote <span class="hljs-keyword">in</span> range(<span class="hljs-number">8</span>):
+        turtle.dot(diametre, couleur)
+        turtle.up(); turtle.forward(longueur); turtle.down()
+        turtle.left(<span class="hljs-number">360</span>/<span class="hljs-number">8</span>)
+        
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">"__main__"</span>:
+    <span class="hljs-comment">#Deux carrés</span>
+    longueurs_carre = [<span class="hljs-number">90</span>, <span class="hljs-number">180</span>]
+    <span class="hljs-keyword">for</span> longueur <span class="hljs-keyword">in</span> longueurs_carre:
+        deplacer_sans_tracer(-longueur/<span class="hljs-number">2</span>,-longueur/<span class="hljs-number">2</span>)
+        carre(longueur)
+    <span class="hljs-comment">#Cercle</span>
+    rayon = turtle.distance(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>)  <span class="hljs-comment">#nous sommes alors sur le coin bas gauche</span>
+    deplacer_sans_tracer(<span class="hljs-number">0</span>, -rayon)
+    turtle.circle(rayon)
+    <span class="hljs-comment">#Octogone de point</span>
+    deplacer_sans_tracer(<span class="hljs-number">-1.25</span>*rayon/<span class="hljs-number">2</span>, <span class="hljs-number">-1.25</span>*rayon<span class="hljs-number">-30</span>)
+    point_octogone(<span class="hljs-number">1.25</span>*rayon, <span class="hljs-number">25</span>, <span class="hljs-string">'red'</span>)
+    <span class="hljs-comment">#Retour maison</span>
+    deplacer_sans_tracer(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>)
+    turtle.exitonclick()
+</code></pre></div></div></div>
+<h4 id="exercice-2">Exercice 2<a aria-hidden="true" href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/#exercice-2"><span class="icon icon-link"></span></a></h4>
+<p>Voici la seconde figure à reproduire :</p>
+<figure><img src="./Tracer et dessiner - À la découverte de turtle • Tutoriels • Zeste de Savoir_files/d5d7d7dc-d8a5-4072-9e70-ffc4ecf816ee.png" alt="Exercice 2."><figcaption>Exercice 2.</figcaption></figure>
+<p>La <strong>correction :</strong></p>
+<a class="spoiler-title ico-after view" href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/#">Afficher/Masquer le contenu masqué</a><div class="custom-block custom-block-spoiler spoiler-build"><div class="custom-block-body"><div class="hljs-code-div"><div class="hljs-line-numbers"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><pre><code class="hljs language-py"><span class="hljs-comment">#!/usr/bin/env python3</span>
+
+<span class="hljs-keyword">import</span> turtle
+
+LARGEUR, HAUTEUR = <span class="hljs-number">640</span>, <span class="hljs-number">480</span>
+        
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">"__main__"</span>:
+    turtle.setup(LARGEUR, HAUTEUR)
+    turtle.speed(<span class="hljs-string">"fast"</span>) <span class="hljs-comment">#Met la vitesse de traçage à rapide</span>
+    ecart = <span class="hljs-number">4</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">30</span>):
+        turtle.stamp()
+        turtle.left(<span class="hljs-number">30</span>)
+        turtle.up(); turtle.forward(ecart); turtle.down()
+        ecart += <span class="hljs-number">3</span>
+    turtle.exitonclick()
+</code></pre></div></div></div>
+<h4 id="exercice-3-flocon-de-von-koch">Exercice 3 : Flocon de Von Koch<a aria-hidden="true" href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/#exercice-3-flocon-de-von-koch"><span class="icon icon-link"></span></a></h4>
+<p>Un flocon de Von Koch est l’ensemble de trois courbes de Von Koch constituant chaque côté du triangle équilatéral initial. Vous pouvez trouver plus d’explication à propos de cette figure et de sa construction <a href="http://villemin.gerard.free.fr/Wwwgvmm/Suite/FracCour.htm">ici</a>. </p>
+<p>À travers cet exercice, il va falloir faire une fonction pour dessiner un flocon de Von Koch en fonction de la longueur des côtés du triangle ainsi que du nombre d’étapes permettant choisir le nombre de pics de notre flocon (par exemple, avec 0 et une longueur non nulle, nous avons juste un triangle équilatéral). Cet exercice étant un peu plus complexe, je vous conseille de découper votre progression ainsi : tout d’abord, essayez de programmer une fonction réalisant une courbe de Von Koch selon les paramètres précédemment mentionnés, puis, dans un second temps, réalisez une fonction pour tracer un flocon selon les paramètres.</p>
+<figure><img src="./Tracer et dessiner - À la découverte de turtle • Tutoriels • Zeste de Savoir_files/068d0aef-c043-41ed-b7cf-2e3afb9e573f.png" alt="Un exemple de flocon de Von Koch avec 3 étapes."><figcaption>Un exemple de flocon de Von Koch avec 3 étapes.</figcaption></figure>
+<p>La <strong>correction</strong> :</p>
+<a class="spoiler-title ico-after view" href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/#">Afficher/Masquer le contenu masqué</a><div class="custom-block custom-block-spoiler spoiler-build" style="display: block;"><div class="custom-block-body"><div class="hljs-code-div"><div class="hljs-line-numbers"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><pre><code class="hljs language-py"><span class="hljs-comment">#!/usr/bin/env python3</span>
+
+<span class="hljs-keyword">import</span> turtle
+ 
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">courbe_koch</span><span class="hljs-params">(longueur, etape)</span>:</span>
+    <span class="hljs-string">"""Fonction récursive pour dessiner une courbe de Von Koch
+    (une fonction récursive étant une fonction s'appelant elle-même"""</span>
+    <span class="hljs-keyword">if</span> etape == <span class="hljs-number">0</span>:
+        turtle.forward(longueur)
+    <span class="hljs-keyword">else</span>:
+        courbe_koch(longueur/<span class="hljs-number">3</span>, etape<span class="hljs-number">-1</span>)
+        turtle.left(<span class="hljs-number">60</span>)
+        courbe_koch(longueur/<span class="hljs-number">3</span>, etape<span class="hljs-number">-1</span>)
+        turtle.right(<span class="hljs-number">120</span>)
+        courbe_koch(longueur/<span class="hljs-number">3</span>, etape<span class="hljs-number">-1</span>)
+        turtle.left(<span class="hljs-number">60</span>)
+        courbe_koch(longueur/<span class="hljs-number">3</span>, etape<span class="hljs-number">-1</span>)
+ 
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">flocon_koch</span><span class="hljs-params">(longueur, etape)</span>:</span>
+    <span class="hljs-string">"""Fonction pour dessiner un flocon de Von Koch
+    depuis le coin haut gauche"""</span>
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">3</span>):  <span class="hljs-comment">#Pour chaque côté du triangle initial</span>
+        courbe_koch(longueur, etape)  <span class="hljs-comment">#Courbe de Von Koch</span>
+        turtle.right(<span class="hljs-number">120</span>)
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">"__main__"</span>:
+    flocon_koch(<span class="hljs-number">100</span>, <span class="hljs-number">3</span>)
+</code></pre></div></div></div>
+<p>Voilà, la récursivité s’appliquant bien à ce genre de figure, nous avons une fonction récursive pour tracer une courbe de Von Koch, puis une fonction traçant un flocon de Von Koch à l’aide de cette première.</p>
+    
+
+
+<hr>
+
+
+    <p>Désormais, nous savons tracer et dessiner en utilisant turtle. Si vous trouvez que ça manque encore de couleurs, vous allez être ravis, car c’est justement le but de la partie suivante !</p>
+
+
+    
+    
+        
+
+
+
+    <ul class="pagination pagination-bottom pagination-chapter">
+        
+            <li class="prev">
+                <a href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/configurer-la-fenetre/" class="ico-after arrow-left" rel="prev">
+                    Configurer la fenêtre
+                </a>
+            </li>
+        
+        
+        
+            <li class="summary-button">
+                <a href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/">
+                    Sommaire
+                </a>
+            </li>        
+        
+        
+        
+            <li class="next">
+                <a href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/colorier/" class="ico-after arrow-right" rel="next">
+                    Colorier
+                </a>
+            </li>
+        
+    </ul>
+
+
+
+    
+
+    
+
+
+
+
+
+            </section>
+        
+        
+    </article>
+    
+
+                    </main>
+
+                    
+    <aside class="sidebar summary mobile-menu-hide">
+        
+
+        
+
+        
+
+        
+    
+
+    
+
+
+
+
+
+
+<div class="mobile-menu-bloc accordeon mobile-menu-imported" data-title="Sommaire du contenu">
+    <h3>Sommaire</h3>
+    
+
+    
+        
+             <h4 data-num="I">
+                <a class="mobile-menu-link" href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/configurer-la-fenetre/">
+                    Configurer la fenêtre
+                </a>
+            </h4>
+            
+               <ul style="display: none;">
+                    
+                        <li>
+                            <a href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/configurer-la-fenetre/#1-les-reglages-1">
+                                Les réglages
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/configurer-la-fenetre/#2-tp-une-fenetre-personnalisee">
+                                TP : Une fenêtre personnalisée
+                            </a>
+                        </li>
+                    
+               </ul>
+            
+        
+             <h4 data-num="II">
+                <a class="mobile-menu-link" href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/">
+                    Tracer et dessiner
+                </a>
+            </h4>
+            
+               <ul class="unfolded">
+                    
+                        <li>
+                            <a href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/#1-se-reperer-et-tracer">
+                                Se repérer et tracer
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/#2-dessiner-des-figures-simples">
+                                Dessiner des figures simples
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/#3-dessiner-des-choses-plus-complexes">
+                                Dessiner des choses plus complexes
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/#4-tp-de-bien-jolis-dessins">
+                                TP : De bien jolis dessins
+                            </a>
+                        </li>
+                    
+               </ul>
+            
+        
+             <h4 data-num="III">
+                <a class="mobile-menu-link" href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/colorier/">
+                    Colorier
+                </a>
+            </h4>
+            
+               <ul style="display: none;">
+                    
+                        <li>
+                            <a href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/colorier/#1-couleur-de-trace-et-de-remplissage">
+                                Couleur de tracé et de remplissage
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/colorier/#2-notre-fonction-point">
+                                Notre fonction point
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/colorier/#3-notre-remplissage-personnalise">
+                                Notre remplissage personnalisé
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/colorier/#4-tp-atelier-coloriage">
+                                TP : Atelier coloriage
+                            </a>
+                        </li>
+                    
+               </ul>
+            
+        
+             <h4 data-num="IV">
+                <a class="mobile-menu-link" href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/interagir-avec-lutilisateur/">
+                    Interagir avec l'utilisateur
+                </a>
+            </h4>
+            
+               <ul style="display: none;">
+                    
+                        <li>
+                            <a href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/interagir-avec-lutilisateur/#1-les-saisies-de-lutilisateur">
+                                Les saisies de l'utilisateur
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/interagir-avec-lutilisateur/#2-les-evenements">
+                                Les événements
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/interagir-avec-lutilisateur/#3-lecriture-a-lecran">
+                                L'écriture à l'écran
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/interagir-avec-lutilisateur/#4-lutilisation-de-timers">
+                                L'utilisation de timers
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/interagir-avec-lutilisateur/#5-tp-le-jeu-des-allumettes-1">
+                                TP : Le jeu des allumettes
+                            </a>
+                        </li>
+                    
+               </ul>
+            
+        
+             <h4 data-num="V">
+                <a class="mobile-menu-link" href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/aller-plus-loin-dans-les-configurations/">
+                    Aller plus loin dans les configurations
+                </a>
+            </h4>
+            
+               <ul style="display: none;">
+                    
+                        <li>
+                            <a href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/aller-plus-loin-dans-les-configurations/#1-parametrer-le-repere-1">
+                                Paramétrer le repère
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/aller-plus-loin-dans-les-configurations/#2-parametrer-le-crayon-1">
+                                Paramétrer le crayon
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/aller-plus-loin-dans-les-configurations/#3-parametrer-encore-et-toujours-1">
+                                Paramétrer encore et toujours
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/aller-plus-loin-dans-les-configurations/#4-tp-configuration-avancee">
+                                TP : Configuration avancée
+                            </a>
+                        </li>
+                    
+               </ul>
+            
+        
+             <h4 data-num="VI">
+                <a class="mobile-menu-link" href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/samuser-avec-plusieurs-tortues/">
+                    S'amuser avec plusieurs tortues
+                </a>
+            </h4>
+            
+               <ul style="display: none;">
+                    
+                        <li>
+                            <a href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/samuser-avec-plusieurs-tortues/#1-la-classe-screen">
+                                La classe Screen
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/samuser-avec-plusieurs-tortues/#2-la-classe-turtle">
+                                La classe Turtle
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/samuser-avec-plusieurs-tortues/#3-tp-clique-la-tortue-1">
+                                TP : Clique la tortue !
+                            </a>
+                        </li>
+                    
+               </ul>
+            
+        
+    
+</div>
+
+
+    
+
+<div class="mobile-menu-bloc mobile-all-links mobile-show-ico mobile-menu-imported" data-title="Partager">
+    <h3>Partager</h3>
+    <ul>
+        <li>
+            <a href="https://twitter.com/share?url=https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/&amp;text=Tracer%20et%20dessiner" class="ico-after twitter blue" rel="nofollow">
+                Twitter
+            </a>
+        </li>
+        <li>
+            <a href="https://www.facebook.com/sharer.php?u=https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/&amp;t=Tracer%20et%20dessiner" class="ico-after facebook blue" rel="nofollow">
+                Facebook
+            </a>
+        </li>
+        <li>
+            <a href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/#share-to-mastodon" class="open-modal ico-after mastodon blue" rel="nofollow">
+                Mastodon
+            </a>
+            
+        </li>
+        <li>
+            <a href="http://sharetodiaspora.github.io/?url=https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/&amp;title=Tracer%20et%20dessiner" class="ico-after diaspora blue" rel="nofollow">
+                Diaspora*
+            </a>
+        </li>
+        <li>
+            <a href="mailto:?subject=Tracer%20et%20dessiner&amp;body=https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/" class="ico-after email blue" rel="nofollow">
+                Envoyer par mail
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+        
+            
+                <div class="mobile-menu-bloc mobile-all-links mobile-show-ico mobile-menu-imported" data-title="Télécharger">
+                    
+                        
+<h3>Télécharger</h3>
+<ul>
+    
+        
+        
+            <li>
+                <a href="https://zestedesavoir.com/tutoriels/html/944/a-la-decouverte-de-turtle.html" class="ico-after download blue">
+                    HTML
+                    
+                        
+                            (126,3&nbsp;Kio)
+                        
+                    
+                </a>
+            </li>
+        
+        
+            <li>
+                <a href="https://zestedesavoir.com/tutoriels/pdf/944/a-la-decouverte-de-turtle.pdf" class="ico-after download blue">
+                    PDF
+                    
+                        
+                            (1,6&nbsp;Mio)
+                        
+                    
+                </a>
+            </li>
+        
+        
+            <li>
+                <a href="https://zestedesavoir.com/tutoriels/tex/944/a-la-decouverte-de-turtle.tex" class="ico-after download blue">
+                    LaTeX
+                    
+                        
+                            (114,0&nbsp;Kio)
+                        
+                    
+                </a>
+            </li>
+        
+        
+            <li>
+                <a href="https://zestedesavoir.com/tutoriels/epub/944/a-la-decouverte-de-turtle.epub" class="ico-after download blue">
+                    EPUB
+                    
+                        
+                            (1,4&nbsp;Mio)
+                        
+                    
+                </a>
+            </li>
+        
+        
+            <li>
+                <a href="https://zestedesavoir.com/tutoriels/zip/944/a-la-decouverte-de-turtle.zip" class="ico-after download blue">
+                    Archive
+                    
+                        
+                            (122,1&nbsp;Kio)
+                        
+                    
+                </a>
+            </li>
+        
+    
+</ul>
+
+                    
+                </div>
+            
+        
+    </aside>
+
+                </div>
+            
+        </div>
+
+
+
+        
+
+<footer class="page-footer">
+    <div class="wrapper">
+        <p class="copyright">
+            Zeste de Savoir
+            <span class="version">
+                • Version :
+                
+                    <a href="https://github.com/zestedesavoir/zds-site/tree/b1b60208443ff76e2b70d6572be2227829de4cbb">v29.3a-plume/b1b6020</a>
+                
+            </span>
+        </p>
+
+        <ul class="social">
+            
+                <li>
+                    <a href="https://framapiaf.org/@ZesteDeSavoir" title="Suivez-nous sur Mastodon" class="btn ico-after mastodon light btn-mastodon btn-holder"></a>
+                </li>
+            
+
+            
+                <li>
+                    <a href="https://www.facebook.com/ZesteDeSavoir" title="Aimez notre page Facebook" class="btn ico-after facebook light btn-facebook btn-holder"></a>
+                </li>
+            
+
+            
+                <li>
+                    <a href="https://twitter.com/ZesteDeSavoir" title="Suivez-nous sur Twitter" class="btn ico-after twitter light btn-twitter btn-holder"></a>
+                </li>
+            
+
+            
+
+            
+        </ul>
+
+        <ul class="links">
+            <li><a href="https://zestedesavoir.com/api/">API</a></li>
+            <li><a href="https://zestedesavoir.com/pages/cgu/">CGU</a></li>
+            <li><a href="https://zestedesavoir.com/pages/apropos/">À propos</a></li>
+            
+                <li><a href="https://zestedesavoir.com/pages/association/">L’association</a></li>
+                <li><a href="https://www.helloasso.com/associations/zeste-de-savoir/adhesions/cotisations-2020-2021">Adhérer à l'association</a></li>
+            
+            <li><a href="https://zestedesavoir.com/pages/contact/">Contact</a></li>
+        </ul>
+    </div>
+</footer>
+
+    </div>
+
+
+
+
+
+
+    
+    <script src="./Tracer et dessiner - À la découverte de turtle • Tutoriels • Zeste de Savoir_files/jquery.min.dc5e7f18c8d3.js.téléchargement"></script>
+    
+    
+    <script src="./Tracer et dessiner - À la découverte de turtle • Tutoriels • Zeste de Savoir_files/script.41381b24032e.js.téléchargement"></script>
+
+
+    
+    
+    <script src="./Tracer et dessiner - À la découverte de turtle • Tutoriels • Zeste de Savoir_files/cookies-eu-banner.min.b9cf22b40760.js.téléchargement"></script>
+    <script>
+        new CookiesEuBanner(function(){
+            
+            dataLayer = [{'gaTrackingId': 'UA-27730868-1'}];
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-WH7642');
+            
+        }, true);
+    </script>
+    
+
+
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [['$', '$']],
+            displayMath: [['$$','$$']],
+            processEscapes: true,
+            processClass: "mathjax-wrapper|mathjax-span",
+            ignoreClass: "page-container"
+        },
+        TeX: { extensions: ["color.js", "cancel.js", "enclose.js", "bbox.js", "mathchoice.js", "newcommand.js", "verb.js", "unicode.js", "autobold.js", "mhchem.js"] },
+        messageStyle: "none",
+    });
+</script>
+<script type="application/javascript">
+    // When the page has been loaded (which means the DOM and Mathjax has been loaded)
+    window.addEventListener("load", function() {
+
+        // We look for <span> inside contents
+        $(".message-content span, .article-content span").each(function () {
+            // We only want those with no CSS class
+            if($(this).attr("class") === undefined) {
+                var text = $(this).text();
+                // We check that they start with $ and end with $
+                if (text && text[0] == "$" && text[text.length - 1] == "$") {
+                    // We add a class to mark them
+                    $(this).addClass("mathjax-span");
+                }
+            }
+        });
+
+        // If there is content waiting for Mathjax
+        if($(".mathjax-span, .mathjax-wrapper").length) {
+            // We run Mathjax
+            MathJax.Hub.Configured();
+        }
+
+    });
+</script>
+
+
+
+<div class="modals-container"><div class="modals-wrapper"><form id="share-to-mastodon" class="modal modal-flex tab-modalize" target="_blank" method="GET">
+                
+                
+                
+
+                
+            <div class="modal-title mastodon light ico-after">
+                Mastodon
+            </div><div class="modal-body"><p>
+                    Entrez l'adresse de votre instance Mastodon (ex: https://mamot.fr).
+                </p><input type="text" class="input" name="instance" placeholder="https://" required=""><input type="hidden" class="input" name="text" value="Tracer et dessiner https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/"></div><div class="modal-footer"><button type="submit" class="btn btn-submit" disabled="">Partager</button><a class="btn btn-cancel" href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/#close-modal">Annuler</a></div></form><div class="modal modal-flex tab-modalize"><div class="modal-title"></div><div class="modal-body"><div class="modal-title">Lien hypertexte</div><div class="modal-body"><div><label for="zform-modal-link-href">Lien :</label><input type="text" id="zform-modal-link-href"></div><div><label for="zform-modal-link-text">Texte :</label><input type="text" id="zform-modal-link-text"></div></div><div class="modal-footer"></div></div><div class="modal-footer"><a class="btn btn-submit" href="javascript:;">Valider</a><a class="btn btn-cancel" href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/#close-modal">Annuler</a><a class="btn btn-cancel" href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/#close-modal">Annuler</a></div></div><div class="modal modal-flex tab-modalize"><div class="modal-title"></div><div class="modal-body"><div class="modal-title">Image</div><div class="modal-body"><div><label for="zform-modal-image-src">URL :</label><input type="text" id="zform-modal-image-src"></div><div><label for="zform-modal-image-text">Texte :</label><input type="text" id="zform-modal-image-text"></div></div><div class="modal-footer"></div></div><div class="modal-footer"><a class="btn btn-submit" href="javascript:;">Valider</a><a class="btn btn-cancel" href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/#close-modal">Annuler</a><a class="btn btn-cancel" href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/#close-modal">Annuler</a></div></div><div class="modal modal-flex tab-modalize"><div class="modal-title"></div><div class="modal-body"><div class="modal-title">Abréviation</div><div class="modal-body"><div><label for="zform-modal-abbr-abbr">Abréviation :</label><input type="text" id="zform-modal-abbr-abbr"></div><div><label for="zform-modal-abbr-text">Texte :</label><input type="text" id="zform-modal-abbr-text"></div></div><div class="modal-footer"></div></div><div class="modal-footer"><a class="btn btn-submit" href="javascript:;">Valider</a><a class="btn btn-cancel" href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/#close-modal">Annuler</a><a class="btn btn-cancel" href="https://zestedesavoir.com/tutoriels/944/a-la-decouverte-de-turtle/tracer-et-dessiner/#close-modal">Annuler</a></div></div></div><div class="modals-overlay"></div></div></body></html>
