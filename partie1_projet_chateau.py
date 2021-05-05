@@ -18,7 +18,6 @@ contenant :
 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 1 0 0 0 1 0 0 0 1 0 1 0 0 0 1 4 0 0 1
 1 1 1 0 1 0 1 0 1 0 1 0 1 0 1 1 1 0 1       
-
 1 0 0 0 3 0 1 0 0 0 1 0 1 0 0 0 0 0 1
 1 0 1 1 1 1 1 0 1 0 1 0 1 1 1 1 1 1 1
 1 0 0 0 1 0 0 0 1 0 3 0 0 0 0 0 0 0 1
@@ -44,7 +43,10 @@ contenant :
 1 4 0 0 0 0 1 0 0 0 1 0 0 0 1 0 3 0 1
 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 2 1
 
-en une liste de listes ou chaque éléments est une liste des nombres de chacune des lignes du fichier
+en une liste de listes ou chaque éléments est une liste des nombres de chacunes des lignes du fichier :
+[[1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+ [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 4, 0, 0, 1],
+etc]
 
 """
 
@@ -203,11 +205,12 @@ def trace_case(case, couleur, pas):
 ##########################################################################
 if __name__=="__main__":
     matrice=lire_matrice(fichier_plan)
+    """
     print(calcul_pas(matrice))
     print(coordonnees((0,0),15))
     #trace_case((0,0),'yellow',15)
     trace_case((26,0),'yellow',15)
     trace_case((25,17),'yellow',15)
     trace_case((0,17),'yellow',15)
-
+"""
     
